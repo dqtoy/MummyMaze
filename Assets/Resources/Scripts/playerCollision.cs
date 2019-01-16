@@ -15,8 +15,9 @@ public class playerCollision : MonoBehaviour
         {
             controller.enabled = false;
             GetComponent<Renderer>().enabled = false;
+
             PlayerPrefs.SetString("MenuType", "LevelFailMenu");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0, LoadSceneMode.Additive);
         }
     }
 }

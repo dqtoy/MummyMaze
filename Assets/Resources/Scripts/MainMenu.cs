@@ -88,6 +88,11 @@ public class MainMenu : MonoBehaviour
         LoadLevel(buildIndex);
     }
 
+    public void Undo()
+    {
+        SceneManager.UnloadSceneAsync(0);
+    }
+
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
